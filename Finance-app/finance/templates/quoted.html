@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+  <h2> 1 share of {{sym}} {{name}}.</h2>
+  <h2> Costs {{(price)|usd}}.</h2>
+{% endblock %}

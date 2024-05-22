@@ -1,0 +1,26 @@
+{% extends "esqueleto.html" %}
+
+{% block title %}
+    Iniciar Sesión
+{% endblock %}
+
+{% block main %}
+<div class="form-container">
+    <div class="form-left">
+        <i class="fas fa-truck-moving fa-3x"></i>
+        <h2>SOLUCIONES LOGISTICAS AL ALCANCE DE TU MANO</h2>
+    </div>
+    <div class="form-right">
+        <form action="/login" method="post">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control" id="username" name="username" placeholder="Usuario" type="text">
+            </div>
+            <div class="password-field">
+                <input class="form-control" id="password" name="password" placeholder="Contraseña" type="password">
+                <span onclick="togglePassword('password')" class="eye-icon">&#128065;</span>
+            </div>
+            <button class="btn btn-primary" type="submit">Iniciar sesión</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

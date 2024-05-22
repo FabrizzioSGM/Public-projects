@@ -1,0 +1,30 @@
+.navbar {
+    background-color: #FFA500; /* Color de fondo anaranjado */
+    transition: background-color 0.3s ease; /* Transición de color suave */
+}
+
+.navbar a.nav-link {
+    color: #FFF; /* Color de texto blanco */
+    transition: color 0.3s ease; /* Transición de color suave */
+}
+
+.navbar a.nav-link:hover {
+    color: #FF4500; /* Cambio de color al hacer hover */
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #FFA500; /* Color de fondo anaranjado */
+    color: #FFF; /* Color de texto blanco */
+    padding: 20px 0; /* Espaciado interno superior e inferior */
+}
+
+footer a {
+    color: #FFF; /* Color de enlaces en el pie de página */
+    text-decoration: none; /* Quitar subrayado de enlaces */
+    transition: color 0.3s ease; /* Transición de color suave */
+}
+
+footer a:hover {
+    color: #FF4500; /* Cambio de color al hacer hover */
+}

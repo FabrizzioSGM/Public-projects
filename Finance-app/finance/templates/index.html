@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table table-hover">
+
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Symbol</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+        {%for share in shares%}
+                <tr>
+                    <td >{{ share["name_share"]}}</td>
+                    <td >{{ share["symbol"]}}</td>
+                    <td >{{ share["num_share"]}}</td>
+                    <td> {{ (share["price_share"])|usd}}</td>
+                    <td> {{ (share["price_share"] * share["num_share"])|usd}}</td>
+                </tr>
+        {% endfor %}
+        <tr>
+            <td scope="col">Cash Remaining </td>
+            <td colspan="3"></td>
+            <td>{{(cash|round(2)|usd)}}</td>
+        </tr>
+        </tbody>
+        <tfoot>
+            <td colspan="4"></td>
+            <td>{{(total|round(2)|usd)}}</td>
+        </tfoot>
+
+
+    </table>
+{% endblock %}

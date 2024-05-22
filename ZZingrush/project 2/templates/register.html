@@ -1,0 +1,33 @@
+{% extends "esqueleto.html" %}
+
+{% block title %}
+    Registrate
+{% endblock %}
+
+{% block main %}
+<div class="form-container">
+    <div class="form-left">
+        <i class="fas fa-truck-moving fa-3x"></i>
+        <h2>SOLUCIONES LOGISTICAS AL ALCANCE DE TU MANO</h2>
+    </div>
+    <div class="form-right">
+        <form action="/register" method="post">
+            <div class="mb-3">
+                <p>Crea tu cuenta aquí.</p>
+                <input type="text" placeholder="Ingresa un nombre de usuario" name="username" id="username" required autofocus class="form-control">
+                <input type="email" placeholder="Ingresa tu correo electrónico" name="email" id="email" required class="form-control">
+                <div class="password-field">
+                    <input type="password" placeholder="Ingresa la contraseña" name="password" id="password" required class="form-control">
+                    <span onclick="togglePassword('password')" class="eye-icon">&#128065;</span>
+                </div>
+                <div class="password-field">
+                    <input type="password" placeholder="Reingresa la contraseña" name="confirmation" id="confirmation" required class="form-control">
+                    <span onclick="togglePassword('confirmation')" class="eye-icon">&#128065;</span>
+                </div>
+                <p>Al crear una cuenta accedes a nuestros <a href="/tap.html">Términos y condiciones</a>.</p>
+                <button type="submit" class="btn btn-primary">Regístrate</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

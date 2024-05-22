@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<body>
+    <h1>Transaction History</h1>
+    <h2>Bought Shares:</h2>
+    <ul>
+      {% for transaction in transactions %}
+        {% if transaction.transaction_type == "bought" %}
+          <li> {{ transaction.num_share }} shares of {{ transaction.symbol }} at ${{ transaction.price_share }} each, on {{ transaction.date }} </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+    <h2>Sold Shares:</h2>
+    <ul>
+      {% for transaction in transactions %}
+        {% if transaction.transaction_type == "sold" %}
+          <li> {{ transaction.num_share }} shares of {{ transaction.symbol }} at ${{ transaction.price_share }} each, on {{ transaction.date }} </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </body>
+{% endblock %}
